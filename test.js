@@ -12,7 +12,7 @@ db.push('testPush', 'aaa')
 db.add("testVarb", 1);
 console.log(db.get("test"), "GET");
 console.log(db.fetch("test"), "FETCH");
-console.log(db.has('testVarb'))
+console.log(db.has('test'))
 
 // db.backup();
 // db.clear()
