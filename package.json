@@ -1,0 +1,20 @@
+{
+  "name": "VslDb",
+  "version": "1.0",
+  "description": "Basic database module.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Database",
+    "Json",
+    "JsonDb"
+  ],
+  "author": "https://github.com/vsl-dev",
+  "license": "ISC",
+  "dependencies": {
+    "cli-color": "^2.0.3",
+    "fs": "^0.0.1-security"
+  }
+}
