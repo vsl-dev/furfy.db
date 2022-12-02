@@ -1,15 +1,17 @@
 const Database = require("./lib/index");
 const db = new Database("./databases/asda.json", {
   databaseName: "Stripe",
-  autoBackup: false,
+  autoBackup: true,
 });
 
 db.set("test", {
   id: 121321,
   username: "vsl-dev",
 });
+db.push('testPush', 'aaa')
 db.add("testVarb", 1);
 console.log(db.get("test"), "GET");
 console.log(db.fetch("test"), "FETCH");
 
-db.backup();
+// db.backup();
+// db.clear()
