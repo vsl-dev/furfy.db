@@ -1,18 +1,29 @@
 const Database = require("./lib/index");
-const db = new Database("./databases/asda.json", {
+const db = new Database("./databases/sada.json", {
   databaseName: "Stripe",
-  autoBackup: true,
+  autoBackup: true
 });
 
-db.set("test", {
-  id: 121321,
-  username: "vsl-dev",
-});
-db.push('testPush', 'aaa')
-db.add("testVarb", 1);
-console.log(db.get("test"), "GET");
-console.log(db.fetch("test"), "FETCH");
-console.log(db.has('test'))
+console.log(db.fetch("s"), "GET / FETCH");
+console.log(db.has("a"), "HAS");
 
-// db.backup();
+db.set("s", "sa");
+db.set("data", {
+  user: 1,
+  usr: 312,
+});
+
+db.push("n", "aaaa");
+
+
 // db.clear()
+
+db.add("a", 1);
+
+setInterval(() => {
+  db.backup();
+  db.add("counter", 1);
+}, 1500);
+
+
+console.log(db.info())
