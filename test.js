@@ -1,7 +1,8 @@
 const Database = require("./lib/index");
 const db = new Database("./databases/sada.json", {
   databaseName: "Stripe",
-  autoBackup: true
+  autoBackup: true,
+  backupLog: false
 });
 
 console.log(db.fetch("s"), "GET / FETCH");
