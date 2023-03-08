@@ -1,6 +1,6 @@
 {
   "name": "furfy.db",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Basic json database module.",
   "main": "index.js",
   "homepage": "https://github.com/vsl-dev/furfy.db#readme",
