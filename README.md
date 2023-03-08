@@ -1,4 +1,4 @@
-# =========< VSL DB >=========
+# =========< FURFY DB >=========
 
 ## Basic JSON Database Module
 
@@ -9,7 +9,7 @@ Coming in new updates
 ### Installing
 
 ```shell
-$ npm i vsldb
+$ npm i furfy.db
 ```
 
 ### Setup
@@ -17,13 +17,13 @@ $ npm i vsldb
 - Common JS
 
 ```js
-const { Database } = require("vsldb");
+const { Database } = require("furfy.db");
 ```
 
 - ES Modules (ESM)
 
 ```js
-import { Database } from "vsldb";
+import { Database } from "furfy.db";
 ```
 
 ```js

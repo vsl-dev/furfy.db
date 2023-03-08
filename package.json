@@ -1,12 +1,15 @@
 {
-  "name": "VslDb",
-  "version": "beta-1.0",
-  "description": "Basic database module.",
+  "name": "furfy.db",
+  "version": "1.0.0",
+  "description": "Basic json database module.",
   "main": "index.js",
+  "homepage": "https://github.com/vsl-dev/furfy.db#readme",
+  "repository": "vsl-dev/furfy.db",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "VSLdb",
     "Database",
     "Json",
     "JsonDb"
