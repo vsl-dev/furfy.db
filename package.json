@@ -9,10 +9,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "VSLdb",
+    "Furfy.db",
     "Database",
     "Json",
-    "JsonDb"
+    "JsonDb",
+    "Db",
+    "db"
   ],
   "author": "https://github.com/vsl-dev",
   "license": "ISC",

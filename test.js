@@ -1,4 +1,4 @@
-const { Database } = require("./lib/index");
+const { Database } = require("./index");
 const db = new Database("./database.json", {
   databaseName: "Database",
 });
