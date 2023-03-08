@@ -1,3 +1,3 @@
-const Database = require("./lib/index.js");
+const { Database } = require("./lib/index.js");
 
 module.exports = Database;

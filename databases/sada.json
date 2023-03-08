@@ -1,11 +1,1 @@
-{
- "s": "sa",
- "data": {
-  "user": 1,
-  "usr": 312
- },
- "n": [
-  "aaaa"
- ],
- "a": 1
-}
+{ "test": "test", "pushTest": [ "test" ], "counter": 1 }

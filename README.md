@@ -17,20 +17,18 @@ $ npm i vsldb
 - Common JS
 
 ```js
-const Database = require("vsldb");
+const { Database } = require("vsldb");
 ```
 
 - ES Modules (ESM)
 
 ```js
-import { Database } from "vsldb/esm";
+import { Database } from "vsldb";
 ```
 
 ```js
 const db = new Database("./database.json", {
   name: "Database", // Database name
-  autoBackup: true, // Automatically backs up the database each time new data is added.
-  backupLog: false, // Logs all backup activities
 });
 ```
 
@@ -41,18 +39,18 @@ const db = new Database("./database.json", {
 ```js
 // Adding methods
 
-db.set("test", { data: "test" });
+db.set("test", { data: "test" }); // { "test": "test" }
 
-db.push("pushTest", { data: "test" });
+db.push("pushTest", { data: "test" }); // { "pushTest": [ "test" ] }
 
-db.add("counter", 1);
+db.add("counter", 1); // { "counter": 1 }
 
 // Fetching methods
 
-db.get("user");
-db.fetch("user");
-db.has("user");
-db.fetchAll();
+db.get("counter"); // { "counter": 1 }
+db.fetch("test"); // { "test": "test" }
+db.has("test"); // true or false
+db.fetchAll(); // { "test": "test", "pushTest": [ "test" ], "counter": 1 }
 
 // Deleting methods
 
@@ -60,11 +58,10 @@ db.delete("user");
 
 // Information methods
 
-db.size();
-db.info();
+db.size(); // 47B
+db.info(); // { "name": "Database", "path": "./databases/database.json", "size": "47B" }
 
 // Others
 
-db.clear();
-db.backup();
+db.clear(); // Clear all databases
 ```
