@@ -54,7 +54,7 @@ db.fetchAll(); // { "test": "test", "pushTest": [ "test" ], "counter": 1 }
 
 // Deleting methods
 
-db.delete("user");
+db.delete("test");
 
 // Information methods
 

@@ -1,26 +1,24 @@
 const { Database } = require("./lib/index");
-const db = new Database("./databases/sada.json", {
-  databaseName: "Stripe",
+const db = new Database("./database.json", {
+  databaseName: "Database",
 });
 
-console.log(db.fetch("s"), "GET / FETCH");
-console.log(db.has("a"), "HAS");
+// Adding methods
 
-// db.set("s", "sa");
-// db.set("data", {
-//   user: 1,
-//   usr: 312,
-// });
+db.set("test", { data: "test" }); // { "test": "test" }
 
-// db.push("n", "aaaa");
+db.push("pushTest", { data: "test" }); // { "pushTest": [ "test" ] }
 
-// db.clear()
+db.add("counter", 1); // { "counter": 1 }
 
-// db.add("a", 1);
+// Fetching methods
 
-// setInterval(() => {
-//   db.add("counter", 1);
-// }, 1500);
+console.log(db.get("counter")); // { "counter": 1 }
+console.log(db.fetch("test")); // { "test": "test" }
+console.log(db.has("test")); // true or false
+console.log(db.fetchAll()); // { "test": "test", "pushTest": [ "test" ], "counter": 1 }
 
-console.log(db.info());
-console.log(db.size());
+// Information methods
+
+console.log(db.size()); // 47B
+console.log(db.info()); // { "name": "Database", "path": "./databases/database.json", "size": "47B" }
