@@ -6,9 +6,7 @@ const db = new Database("./database.json", {
 // Adding methods
 
 db.set("test", { data: "test" }); // { "test": "test" }
-
 db.push("pushTest", { data: "test" }); // { "pushTest": [ "test" ] }
-
 db.add("counter", 1); // { "counter": 1 }
 
 // Fetching methods

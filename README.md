@@ -2,9 +2,10 @@
 
 ## Basic JSON Database Module
 
-### Changelogs
+### Changelogs: v1.1.0
 
-Coming in new updates
+- Added .getValues() and .getKeys() functions
+- Fixed some bugs
 
 ### Installing
 
@@ -40,9 +41,7 @@ const db = new Database("./database.json", {
 // Adding methods
 
 db.set("test", { data: "test" }); // { "test": "test" }
-
 db.push("pushTest", { data: "test" }); // { "pushTest": [ "test" ] }
-
 db.add("counter", 1); // { "counter": 1 }
 
 // Fetching methods
@@ -51,6 +50,8 @@ db.get("counter"); // { "counter": 1 }
 db.fetch("test"); // { "test": "test" }
 db.has("test"); // true or false
 db.fetchAll(); // { "test": "test", "pushTest": [ "test" ], "counter": 1 }
+db.getValues("testers"); // from { "testers": "tester1": true, "tester2": false } to [ { "tester1": true } , { "tester2": false } ]
+db.getKeys("testers"); // [ "tester1", "tester2" ]
 
 // Deleting methods
 
